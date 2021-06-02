@@ -21,8 +21,9 @@
     <button @click.right="remove(5)">Remove 5</button>
     <!-- Another event modifier .right that allows to work only with right click -->
     <p>Result: {{ counter }}</p>
-    <input type="text" @input="setName($event, 'Ozdil')">
-    <p>Your name: {{ name }}</p>
+    <input type="text" @input="setName($event, 'Ozdil')" @keyup.enter="confirmInput">
+    <!-- Only when enter keyup is hit -->
+    <p>Your name: {{ confirmedName }}</p>
     <form @submit.prevent="submitForm">
       <!-- .prevent is a VUE MODIFIER -->
       <input type="text">
