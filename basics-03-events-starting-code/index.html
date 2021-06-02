@@ -23,9 +23,10 @@
     <p v-once>Starting Counter: {{ counter }}</p>
     <!-- If we want something to change only once at the beginning -->
     <p>Result: {{ counter }}</p>
-    <input type="text" @input="setName($event, 'Ozdil')" @keyup.enter="confirmInput">
+    <input type="text" v-model="name">
     <!-- Only when enter keyup is hit -->
-    <p>Your name: {{ confirmedName }}</p>
+    <button @click="resetInput">Reset Input</button>
+    <p>Your name: {{ name }}</p>
     <form @submit.prevent="submitForm">
       <!-- .prevent is a VUE MODIFIER -->
       <input type="text">
