@@ -22,6 +22,11 @@
     <p>Result: {{ counter }}</p>
     <input type="text" @input="setName($event, 'Ozdil')">
     <p>Your name: {{ name }}</p>
+    <form @submit.prevent="submitForm"> 
+      <!-- .prevent is a VUE MODIFIER -->
+      <input type="text">
+      <button>Sign Up</button>
+    </form>
   </section>
 </body>
 
