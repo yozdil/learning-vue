@@ -18,11 +18,12 @@
   <section id="events">
     <h2>Events in Action</h2>
     <button @click="add(5)">Add 5</button>
-    <button @click="remove(5)">Remove 5</button>
+    <button @click.right="remove(5)">Remove 5</button>
+    <!-- Another event modifier .right that allows to work only with right click -->
     <p>Result: {{ counter }}</p>
     <input type="text" @input="setName($event, 'Ozdil')">
     <p>Your name: {{ name }}</p>
-    <form @submit.prevent="submitForm"> 
+    <form @submit.prevent="submitForm">
       <!-- .prevent is a VUE MODIFIER -->
       <input type="text">
       <button>Sign Up</button>
