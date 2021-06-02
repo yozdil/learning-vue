@@ -20,6 +20,8 @@
     <button @click="add(5)">Add 5</button>
     <button @click.right="remove(5)">Remove 5</button>
     <!-- Another event modifier .right that allows to work only with right click -->
+    <p v-once>Starting Counter: {{ counter }}</p>
+    <!-- If we want something to change only once at the beginning -->
     <p>Result: {{ counter }}</p>
     <input type="text" @input="setName($event, 'Ozdil')" @keyup.enter="confirmInput">
     <!-- Only when enter keyup is hit -->
