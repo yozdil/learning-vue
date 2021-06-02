@@ -25,7 +25,7 @@ const app = Vue.createApp({
     /**
      * JS property if you point an event listener to a function it automatically gets the parameter event
      */
-    setName(e, lastName) {
+    setName(e) {
       this.name = e.target.value;
     },
     submitForm() {

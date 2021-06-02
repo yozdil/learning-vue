@@ -24,7 +24,7 @@
     <!-- If we want something to change only once at the beginning -->
     <p>Result: {{ counter }}</p>
     <input type="text" v-model="name">
-<!-- v-model combines :value AND @input -->
+    <!-- v-model combines :value AND @input -->
     <button @click="resetInput">Reset Input</button>
     <p>Your name: {{ fullname }}</p>
     <form @submit.prevent="submitForm">
