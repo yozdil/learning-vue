@@ -6,6 +6,15 @@ const app = Vue.createApp({
       confirmedName: "",
     };
   },
+  computed: {
+    fullname() {
+      if (this.name === "") {
+        return "";
+      } else {
+        return `${this.name} Ozdil`;
+      }
+    },
+  },
   methods: {
     add(num) {
       this.counter = this.counter + num;
@@ -17,13 +26,13 @@ const app = Vue.createApp({
      * JS property if you point an event listener to a function it automatically gets the parameter event
      */
     setName(e, lastName) {
-      this.name = `${e.target.value}`;
+      this.name = e.target.value;
     },
     submitForm() {
       alert("Submitted!");
     },
     confirmInput() {
-      this.confirmedName = this.name
+      this.confirmedName = this.name;
     },
     resetInput() {
       this.name = "";
