@@ -24,7 +24,7 @@
       <button @click="addTask">Add Task</button>
       <ul>
         <!-- 2) Output the list of tasks here -->
-        <li :key="task" v-show="showStat" v-for="task in tasksArr">{{ task }}</li>
+        <li :key="task" v-if="showStat" v-for="task in tasksArr">{{ task }}</li>
       </ul>
       <!-- 3) When the below button is pressed, the list should be shown or hidden -->
       <!-- BONUS: Also update the button caption -->
