@@ -1,22 +1,26 @@
 <template>
-  <div>
-    <label>Name:</label>
-    <input v-model="userName" type="text" />
-  </div>
-  <div>
-    <label>Age:</label>
-    <input v-model="userAge" type="text" />
-  </div>
+  <section>
+    <form @submit.prevent="submitData">
+      <input v-model="enteredUserName" type="text" placeholder="Your Name" />
+      <input v-model="enteredUserAge" type="text" placeholder="Your Age" />
+      <button>Set User Data</button>
+    </form>
+  </section>
 </template>
 
 <script>
 export default {
-  emits: ["add-user"],
+  emits: ["set-data"],
   data() {
     return {
-      userName: "",
-      userAge: "",
+      enteredUserName: "",
+      enteredUserAge: "",
     };
+  },
+  methods: {
+    submitData() {
+      this.$emit("set-data", this.enteredUserName, this.enteredUserAge);
+    },
   },
 };
 </script>

@@ -1,12 +1,23 @@
 <template>
-  <div>
-    <h2>username</h2>
-    <h3>age</h3>
-  </div>
+  <section>
+    <h2>{{ username }}</h2>
+    <h3>{{ userage }}</h3>
+  </section>
 </template>
 
 <script>
 export default {
-  emits: ["users"],
+  props: {
+    username: {
+      type: String,
+      required: true,
+    },
+    userage: {
+      type: Number,
+      required: true,
+    },
+  },
 };
 </script>
+
+<style scoped></style>
