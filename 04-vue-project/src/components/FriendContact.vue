@@ -1,6 +1,7 @@
 <template>
   <li>
     <h2>{{ name }} {{ friendIsFavorite ? "(Favorite)" : "" }}</h2>
+    <button @click="toggleFavorite">Toggle Favorite</button>
     <button @click="toggleDetails">
       {{ detailsAreVisible ? "Hide Details" : "Show Details" }}
     </button>
