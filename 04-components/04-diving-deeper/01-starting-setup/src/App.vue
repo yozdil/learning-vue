@@ -1,6 +1,7 @@
 <template>
   <div>
-    <the-header></the-header>
+    <!-- <the-header></the-header>  ----- We can also use the component this way  -->
+    <TheHeader />
     <badge-list></badge-list>
     <user-info
       :full-name="activeUser.name"
@@ -11,13 +12,18 @@
 </template>
 
 <script>
+import TheHeader from "./components/TheHeader.vue";
+
 export default {
+  components: {
+    TheHeader,
+  },
   data() {
     return {
       activeUser: {
-        name: 'Maximilian Schwarzmüller',
-        description: 'Site owner and admin',
-        role: 'admin',
+        name: "Maximilian Schwarzmüller",
+        description: "Site owner and admin",
+        role: "admin",
       },
     };
   },
