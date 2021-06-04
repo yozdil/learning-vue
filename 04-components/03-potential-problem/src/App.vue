@@ -4,7 +4,7 @@
       :topic-title="activeTopic && activeTopic.title"
       :text="activeTopic && activeTopic.fullText"
     ></active-element>
-    <knowledge-base @select-topic="activateTopic"></knowledge-base>
+    <knowledge-base></knowledge-base>
   </div>
 </template>
 
@@ -35,7 +35,8 @@ export default {
   // We can change provide object to a method to use this.topics
   provide() {
     return {
-      topics: this.topics
+      topics: this.topics,
+      selectTopic: this.activateTopic
     };
   },
   methods: {
