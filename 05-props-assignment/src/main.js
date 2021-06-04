@@ -1,12 +1,18 @@
-import { createApp } from 'vue'
+import { createApp } from "vue";
 
-createApp({}).mount('#app')
+import App from "./App";
+import ActiveUser from "./components/ActiveUser";
+import UserData from "./components/UserData";
 
-// Task 1: Add two components to the app: 
-// An ActiveUser component and an UserData component
-// ActiveUser should output a username (h2) and age (h3)
-// UserData should output two input fields => for name and age
-// Optional: Add styling of your choice
+const app = createApp(App);
+
+app.component(ActiveUser);
+app.component(UserData);
+app.mount("#app");
+
+// Task 1: Add two components to the app:
+
+
 
 // Task 2: Output both components side-by-side in your main App template
 
