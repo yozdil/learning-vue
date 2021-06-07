@@ -8,6 +8,11 @@
       :info-text="activeUser.description"
       :role="activeUser.role"
     />
+    <CourseGoals  #default="slotProps">
+      <!-- We do not have to use template as all goes into the default slot -->
+        <h2>{{ slotProps.item }}</h2>
+        <p>{{ slotProps["another-prop"] }}</p>
+    </CourseGoals>
   </div>
 </template>
 
@@ -15,12 +20,14 @@
 import BadgeList from "./components/BadgeList.vue";
 import UserInfo from "./components/UserInfo.vue";
 import TheHeader from "./components/TheHeader.vue";
+import CourseGoals from "./components/CourseGoals.vue";
 
 export default {
   components: {
     BadgeList,
     UserInfo,
     TheHeader,
+    CourseGoals,
   },
   data() {
     return {
