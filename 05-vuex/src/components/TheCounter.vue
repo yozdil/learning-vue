@@ -8,7 +8,7 @@
 export default {
   computed: {
     addOne() {
-      return this.$store.state.counter;
+      return this.$store.getters.finalCounter;
     }
   }
 };
