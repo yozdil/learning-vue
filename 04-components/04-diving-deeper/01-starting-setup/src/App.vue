@@ -7,7 +7,9 @@
     </button>
     <!-- <active-goals v-if="selectedComponent === 'active-goals'"></active-goals>
     <managed-goals v-if="selectedComponent === 'managed-goals'"></managed-goals> -->
-    <component :is="selectedComponent"></component>
+    <keep-alive>
+      <component :is="selectedComponent"></component>
+    </keep-alive>
   </div>
 </template>
 
