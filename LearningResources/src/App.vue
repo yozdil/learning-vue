@@ -6,7 +6,6 @@
 import TheHeader from './components/layouts/TheHeader.vue';
 export default {
   components: {
-    StoredResources,
     TheHeader
   },
   data() {
